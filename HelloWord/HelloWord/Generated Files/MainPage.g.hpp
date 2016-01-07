@@ -50,6 +50,8 @@ void ::HelloWord::MainPage::Connect(int __connectionId, ::Platform::Object^ __ta
         case 5:
             {
                 this->inputButton = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
+                (safe_cast<::Windows::UI::Xaml::Controls::Button^>(this->inputButton))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::HelloWord::MainPage::*)
+                    (::Platform::Object^, ::Windows::UI::Xaml::RoutedEventArgs^))&MainPage::inputButton_Click);
             }
             break;
     }
