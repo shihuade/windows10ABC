@@ -8,8 +8,12 @@
     mc:Ignorable="d" Height="1146.047" Width="1282.791">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel x:Name="contentPanel" Margin="120,30,10,0">
-            <TextBlock HorizontalAlignment="Left" Text="Hello World" FontSize="66"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="1161*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="contentPanel" Margin="120,30,10,0" Grid.ColumnSpan="2">
+            <TextBlock HorizontalAlignment="Left" Text="Hello World" FontSize="40" Style="{StaticResource BaseTextBlockStyle}"/>
             <TextBlock Text="What's your name?" FontSize="56"/>
             <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
                 <TextBox x:Name="nameInput" Width="472" HorizontalAlignment="Left"/>
